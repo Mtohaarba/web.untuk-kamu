@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lela - TETEHKECIL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(to bottom, #ffb6c1, #ffe4e1);
+      font-family: 'Pacifico', cursive;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    h1 {
+      font-size: 5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px #00000033;
+      animation: fadeInDown 2s ease;
+    }
+    h2 {
+      font-size: 2.5rem;
+      color: #fff8dc;
+      text-shadow: 2px 2px 4px #00000033;
+      animation: fadeInUp 2.5s ease;
+    }
+    @keyframes fadeInDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .flower {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: url('https://pngimg.com/uploads/flower/flower_PNG10242.png') no-repeat center;
+      background-size: contain;
+      animation: float 10s linear infinite;
+      opacity: 0.7;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Lela</h1>
+  <h2>TETEHKECIL</h2>
+  <2>Jangan marahagi yaa...</>  <script>
+    // Bikin bunga animasi acak di layar
+    const flowerCount = 20;
+    for (let i = 0; i < flowerCount; i++) {
+      const flower = document.createElement('div');
+      flower.className = 'flower';
+      flower.style.left = Math.random() * 100 + 'vw';
+      flower.style.animationDuration = 5 + Math.random() * 10 + 's';
+      flower.style.width = flower.style.height = 30 + Math.random() * 40 + 'px';
+      document.body.appendChild(flower);
+    }
+  </script></body>
+</html>
